@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+}
+
+body, #counter {
+    height: 100%;
+}
+
+#counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter {
+    width: 20%;
+    height: 50%;
+    border: 3px solid #000;
+    padding: 3% 10%;
+}
+
+.displays-block {
+    padding: 0 10%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 24px;
+}
+
+.count-block,
+.even-odd-block {
+    border: 3px solid #000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-block {
+    height: 40%;
+}
+
+.even-odd-block {
+    height: 30%;
+}
+
+.buttons-block {
+    height: 30%;
+    justify-content: space-between;
+}
+
+.displays-block,
+.buttons-block {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    border: 3px solid #000;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px 0;
+    font-size: 24px;
+    cursor: pointer;
+}
