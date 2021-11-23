@@ -35,6 +35,7 @@ body, #counter {
 
 .count-block,
 .even-odd-block {
+    background-color: #fff;
     border: 3px solid #000;
     width: 100%;
     display: flex;
@@ -69,4 +70,8 @@ button {
     padding: 20px 0;
     font-size: 24px;
     cursor: pointer;
+}
+
+.even-bgc {
+    background-color: #ededed;
 }

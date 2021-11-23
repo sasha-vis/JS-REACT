@@ -1,14 +1,18 @@
+const {useState} = React;
+
 const Counter = function () {
+    const [count, setCount] = useState(0);
+
     return(
-        <div className="counter">
+        <div className={count % 2 === 0 ? "counter" : "counter even-bgc"}>
             <div className="displays-block">
-                <div className="count-block"><span className="count">0</span></div>
-                <div className="even-odd-block"><span className="even-odd">Введено четное число</span></div>
+                <div className="count-block"><span className="count">{count}</span></div>
+                <div className="even-odd-block"><span className="even-odd">{count % 2 === 0 ? 'Введено четное число' : 'Введено нечетное число'}</span></div>
             </div>
             <div className="buttons-block">
-                <button className="minus">-</button>
-                <button className="reset">reset</button>
-                <button className="plus">+</button>
+                <button className="minus" onClick={count > 0 ? ()=>setCount(count-1) : ()=>setCount(0)}>-</button>
+                <button className="reset" onClick={()=>setCount(0)}>reset</button>
+                <button className="plus" onClick={()=>setCount(count+1)}>+</button>
             </div>
         </div>
     );
